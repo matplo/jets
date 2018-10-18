@@ -1,0 +1,148 @@
+#-----------------------
+#figure 80_vac_dsjL
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_dsjL :colz over smooth noleg: title=lund 80+ GeV Jets
+
+#force_legend 1
+##legend 0.307,0.674,0.507,0.873, title=,, tx_size=0.03
+#comment 0.37,0.553,0.848,0.654, tx_size=0.03 item=Scatter plot for jets in VACUUM item=#Delta R_{12} > 0.1 and #Delta S_{12} < 0.2
+##alpha=50
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##comment 0.569,0.413,0.69,0.577, item=ln(z #theta) = - ln(1/#Delta) - 0.5 tx_rotation=-27 tx_size=0.035
+#comment 0.569,0.45,0.69,0.577, item=ln(#kappa) = - ln(1/#Delta) - 0.5 tx_rotation=-27.5 tx_size=0.035
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+#line  1.0, -1.5, 6., -6.5,  38, 1, 1
+#line  1.0, -2.5, 6., -7.5,  38, 1, 1
+#line  1.0, -3.5, 5.5, -8.0, 38, 1, 1
+#line  1.0, -4.5, 4.5, -8.0, 38, 1, 1
+#line  1.0, -5.5, 3.5, -8.0, 38, 1, 1
+#line  1.0, -6.5, 2.5, -8.0, 38, 1, 1
+#line  1.0, -7.5, 1.5, -8.0, 38, 1, 1
+
+##minz 0.000
+##maxz 0.007
+#maxz 0.8
+#minz 0.0
+
+#-----------------------
+#figure 80_vac_dsjH
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_dsjH :colz over smooth noleg: title=lund 80+ GeV Jets
+
+#force_legend 1
+##legend 0.307,0.674,0.507,0.873, title=,, tx_size=0.03
+#comment 0.37,0.553,0.848,0.654, tx_size=0.03 item=Scatter plot for jets in VACUUM item=#Delta R_{12} > 0.1 and #Delta S_{12} > 0.8
+##alpha=50
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##comment 0.569,0.413,0.69,0.577, item=ln(z #theta) = - ln(1/#Delta) - 0.5 tx_rotation=-27 tx_size=0.035
+#comment 0.569,0.45,0.69,0.577, item=ln(#kappa) = - ln(1/#Delta) - 0.5 tx_rotation=-27.5 tx_size=0.035
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+#line  1.0, -1.5, 6., -6.5,  38, 1, 1
+#line  1.0, -2.5, 6., -7.5,  38, 1, 1
+#line  1.0, -3.5, 5.5, -8.0, 38, 1, 1
+#line  1.0, -4.5, 4.5, -8.0, 38, 1, 1
+#line  1.0, -5.5, 3.5, -8.0, 38, 1, 1
+#line  1.0, -6.5, 2.5, -8.0, 38, 1, 1
+#line  1.0, -7.5, 1.5, -8.0, 38, 1, 1
+
+##minz 0.000
+##maxz 0.007
+#maxz 0.02
+#minz 0.0
+
+#-----------------------
+#figure 80_med_dsjL
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_dsjL :colz over smooth noleg: title=lund 80+ GeV Jets
+
+#force_legend 1
+##legend 0.307,0.674,0.507,0.873, title=,, tx_size=0.03
+#comment 0.37,0.553,0.848,0.654, tx_size=0.03 item=Scatter plot for jets in MEDIUM item=#Delta R_{12} > 0.1 and #Delta S_{12} < 0.2
+##alpha=50
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##comment 0.569,0.413,0.69,0.577, item=ln(z #theta) = - ln(1/#Delta) - 0.5 tx_rotation=-27 tx_size=0.035
+#comment 0.569,0.45,0.69,0.577, item=ln(#kappa) = - ln(1/#Delta) - 0.5 tx_rotation=-27.5 tx_size=0.035
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+#line  1.0, -1.5, 6., -6.5,  38, 1, 1
+#line  1.0, -2.5, 6., -7.5,  38, 1, 1
+#line  1.0, -3.5, 5.5, -8.0, 38, 1, 1
+#line  1.0, -4.5, 4.5, -8.0, 38, 1, 1
+#line  1.0, -5.5, 3.5, -8.0, 38, 1, 1
+#line  1.0, -6.5, 2.5, -8.0, 38, 1, 1
+#line  1.0, -7.5, 1.5, -8.0, 38, 1, 1
+
+#maxz 0.007
+#minz 0.000
+#maxz 0.8
+#minz 0.0
+
+#-----------------------
+#figure 80_med_dsjH
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_dsjH :colz over smooth noleg: title=lund 80+ GeV Jets
+
+#force_legend 1
+##legend 0.307,0.674,0.507,0.873, title=,, tx_size=0.03
+#comment 0.37,0.553,0.848,0.654, tx_size=0.03 item=Scatter plot for jets in MEDIUM item=#Delta R_{12} > 0.1 and #Delta S_{12} > 0.8
+##alpha=50
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##comment 0.569,0.413,0.69,0.577, item=ln(z #theta) = - ln(1/#Delta) - 0.5 tx_rotation=-27 tx_size=0.035
+#comment 0.569,0.45,0.69,0.577, item=ln(#kappa) = - ln(1/#Delta) - 0.5 tx_rotation=-27.5 tx_size=0.035
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+#line  1.0, -1.5, 6., -6.5,  38, 1, 1
+#line  1.0, -2.5, 6., -7.5,  38, 1, 1
+#line  1.0, -3.5, 5.5, -8.0, 38, 1, 1
+#line  1.0, -4.5, 4.5, -8.0, 38, 1, 1
+#line  1.0, -5.5, 3.5, -8.0, 38, 1, 1
+#line  1.0, -6.5, 2.5, -8.0, 38, 1, 1
+#line  1.0, -7.5, 1.5, -8.0, 38, 1, 1
+
+#maxz 0.007
+#minz 0.000
+#maxz 0.02
+#minz 0.0
+

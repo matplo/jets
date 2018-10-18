@@ -1,0 +1,24 @@
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x log(1/#theta)
+#y log(z #theta)
+#z counts
+#xrange -10,-0.09
+#title "Full" R=0.4 100 < p_{T}^{jet} < 120 (GeV/c)
+proj_r04_full.root 		:lund_r04_full_pt_100_120 :lego2 p +k1 +a5 noleg: title=lund_r04_full_pt_100_120
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x log(1/#theta)
+#y log(z #theta)
+#z counts
+#xrange -10,-0.09
+
+#title "Charged" R=0.4 100 < p_{T}^{jet} < 120 (GeV/c)
+proj_r04_charged.root 		:lund_r04_charged_pt_100_120 :lego2 p +k1 +a5 noleg: title=lund_r04_charged_pt_100_120

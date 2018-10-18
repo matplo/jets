@@ -1,0 +1,14 @@
+./ihadd.sh pp5_hb10_15_TT20_25.txt
+./ihadd.sh pp5_hb110_140_TT20_25.txt
+./ihadd.sh pp5_hb140_180_TT20_25.txt
+./ihadd.sh pp5_hb15_20_TT20_25.txt
+./ihadd.sh pp5_hb180_220_TT20_25.txt
+./ihadd.sh pp5_hb20_30_TT20_25.txt
+./ihadd.sh pp5_hb220_270_TT20_25.txt
+./ihadd.sh pp5_hb270_320_TT20_25.txt
+./ihadd.sh pp5_hb30_40_TT20_25.txt
+./ihadd.sh pp5_hb320_400_TT20_25.txt
+./ihadd.sh pp5_hb40_60_TT20_25.txt
+./ihadd.sh pp5_hb5_10_TT20_25.txt
+./ihadd.sh pp5_hb60_80_TT20_25.txt
+./ihadd.sh pp5_hb80_110_TT20_25.txt

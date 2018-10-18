@@ -1,0 +1,123 @@
+#-----------------------
+#figure test limits
+#geom 500x500
+#date
+#title: smart group
+#x ln(1 / #theta)
+#y ln(z#theta)
+#logz 1
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D :colz +xprof +yprof: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x ln(1 / #theta)
+#y ln(z#theta)
+
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D :colz over smooth noleg: title=lund 80+ GeV Jets
+
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_pfx :l +l1 +k2: title=VACUUM <log(z#theta)>
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_pfx :p +m50 -k +p24: title=MEDIUM <log(z#theta)>
+
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_pfy_to_graph :l +l1 +k8: title=VACUUM <log(1/#theta)>
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_pfy_to_graph :p +m50 -k +p25: title=MEDIUM <log(1/#theta)>
+
+#force_legend 1
+##legend 0.307,0.674,0.507,0.873, title=,, tx_size=0.03
+#comment 0.381,0.209,0.982,0.31, tx_size=0.03 item=Scatter plot for VACUUM
+#legend 0.582,0.676,0.78,0.873, title=,, tx_size=0.03
+#comment 0.144,0.676,0.745,0.873, tx_size=0.03 item=JEWEL/PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A reclustering item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+#line 0.9, -1.5, 6., -6.5
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x ln(1 / #theta)
+#y ln(z#theta)
+#med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D :colz +xprof +yprof over smooth: title=lund 80+ GeV Jets
+
+#comment 0.381,0.209,0.982,0.31, tx_size=0.03 item=Scatter plot for MEDIUM
+
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D :colz noleg over smooth: title=lund 80+ GeV Jets
+
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_pfx :l +l1 +k2: title=VACUUM <log(z#theta)>
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_pfx :p +m50 -k +p24: title=MEDIUM <log(z#theta)>
+
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_pfy_to_graph :l +l1 +k8: title=VACUUM <log(1/#theta)>
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_pfy_to_graph :p +m50 -k +p25: title=MEDIUM <log(1/#theta)>
+
+#force_legend 1
+#legend 0.307,0.674,0.507,0.873, title=JEWEL/PYTHIA pp #sqrt{s_{NN}} = 5 TeV 80 < p_{T}^{jet} < 120 (GeV/c),, tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x ln(1 / #theta)
+#y ln(z#theta)
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :med_vac :colz over smooth: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x ln(1 / #theta)
+#y ln(z#theta)
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :med_div_vac :colz over smooth: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x ln(1 / #theta)
+#y ln(z#theta)
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2D :colz +xprof +yprof over smooth: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x ln(1 / #theta)
+#y ln(z#theta)
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2D :colz +xprof +yprof over smooth: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x ln(1 / #theta)
+#y ln(z#theta)
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :med_vac :colz over smooth: title=lund 200+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x ln(1 / #theta)
+#y ln(z#theta)
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :med_div_vac :colz over smooth: title=lund 200+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03

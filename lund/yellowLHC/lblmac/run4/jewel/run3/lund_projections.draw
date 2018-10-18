@@ -1,0 +1,49 @@
+#-----------------------
+#figure 200_med_vac
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y 1/N_{jet} dn_{emission}/d(ln(1/#Delta))
+
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund_proj1 :p +m75: title=MEDIUM 80 < p_{T}^{jet} < 120 GeV/c
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund_proj1 :graph l +l1 no_y_error no_x_error +m1 -k: title=VACUUM 80 < p_{T}^{jet} < 120 GeV/c
+
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund_proj1 :p +m75: title=MEDIUM 200 < p_{T}^{jet} < 250 GeV/c
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund_proj1 :graph l +l1 no_y_error no_x_error +m1 -k: title=VACUUM 200 < p_{T}^{jet} < 250 GeV/c
+
+##legend title=JEWEL (no recoil) + PYTHIA 5 TeV,, tx_size=0.035
+#legend 0.528,0.643,0.727,0.878, title=JEWEL (no recoil) + PYTHIA,, tx_size=0.035
+
+##comment 0.53,0.556,0.996,0.657, item=10% central Pb-Pb item=anti-k_{T} R=0.4 |#eta^{jet}| < 2; C/A structure tx_size=0.035 bgc=2 alpha=100
+##comment 0.488,0.484,0.9,0.62, item=10% central Pb-Pb item=anti-k_{T} R=0.4 |#eta^{jet}| < 2; C/A structure item= -3 < ln(#kappa) < -5 tx_size=0.035
+
+#comment 0.48,0.474,0.949,0.629, item=10% central Pb-Pb #sqrt{s_{NN}}=5 TeV item=anti-k_{T} R=0.4 |#eta^{jet}| < 2 item= C/A structure: -3 < ln(#kappa) < -5 tx_size=0.035
+
+#miny 0.0
+#maxy 2.5
+
+#-----------------------
+#figure 200_med_vac
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y 1/N_{jet} dn_{emission}/d(ln(1/#Delta))
+
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund_proj2 :p +m75: title=MEDIUM 80 < p_{T}^{jet} < 120 GeV/c
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund_proj2 :graph l +l1 no_y_error no_x_error +m1 -k: title=VACUUM 80 < p_{T}^{jet} < 120 GeV/c
+
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund_proj2 :p +m75: title=MEDIUM 200 < p_{T}^{jet} < 250 GeV/c
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund_proj2 :graph l +l1 no_y_error no_x_error +m1 -k: title=VACUUM 200 < p_{T}^{jet} < 250 GeV/c
+
+#legend 0.528,0.643,0.727,0.878, title=JEWEL (no recoil) + PYTHIA,, tx_size=0.035
+
+##comment 0.53,0.556,0.996,0.657, item=10% central Pb-Pb item=anti-k_{T} R=0.4 |#eta^{jet}| < 2; C/A structure tx_size=0.035 bgc=2 alpha=100
+##comment 0.488,0.484,0.9,0.62, item=10% central Pb-Pb item=anti-k_{T} R=0.4 |#eta^{jet}| < 2; C/A structure item= -5 < ln(#kappa) < -7 tx_size=0.035 bgc=0 alpha=75
+##comment 0.156,0.735,0.624,0.871, item=10% central Pb-Pb item=anti-k_{T} R=0.4 |#eta^{jet}| < 2; C/A structure item= -5 < ln(#kappa) < -7 tx_size=0.035
+
+#comment 0.0762,0.214,0.544,0.369, item=10% central Pb-Pb #sqrt{s_{NN}}=5 TeV item=anti-k_{T} R=0.4 |#eta^{jet}| < 2 item= C/A structure: -5 < ln(#kappa) < -7 tx_size=0.035
+
+#miny 0.0
+#maxy 2.5

@@ -1,0 +1,136 @@
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_0_20 :colz  : title=lund_r04_charged_pt_0_20
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_0_20_pfy_T : p  : title=lund_r04_charged_pt_0_20
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_20_40 :colz  : title=lund_r04_charged_pt_20_40
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_20_40_pfy_T : p  : title=lund_r04_charged_pt_20_40
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_40_60 :colz  : title=lund_r04_charged_pt_40_60
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_40_60_pfy_T : p  : title=lund_r04_charged_pt_40_60
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_60_80 :colz  : title=lund_r04_charged_pt_60_80
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_60_80_pfy_T : p  : title=lund_r04_charged_pt_60_80
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_80_100 :colz  : title=lund_r04_charged_pt_80_100
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_80_100_pfy_T : p  : title=lund_r04_charged_pt_80_100
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_100_120 :colz  : title=lund_r04_charged_pt_100_120
+#/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_100_120_pfy_T : p  : title=lund_r04_charged_pt_100_120
+
+/Volumes/one/run4/proj_r02_charged.root 		:lund_r02_charged_pt_100_120_pfy_T: p +m75 +k6: title=py r=0.2
+/Volumes/one/run4/proj_r03_charged.root 		:lund_r03_charged_pt_100_120_pfy_T: p +m75 +k6: title=py r=0.3
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_100_120_pfy_T: p +m75 +k6: title=py r=0.4
+/Volumes/one/run4/proj_r05_charged.root 		:lund_r05_charged_pt_100_120_pfy_T: p +m75 +k6: title=py r=0.5
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_120_140 :colz  : title=lund_r04_charged_pt_120_140
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_120_140_pfy_T : p  : title=lund_r04_charged_pt_120_140
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_140_160 :colz  : title=lund_r04_charged_pt_140_160
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_140_160_pfy_T : p  : title=lund_r04_charged_pt_140_160
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+# /Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_160_180 :colz +xprof +yprof: title=lund_r04_charged_pt_160_180
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_160_180 :colz: title=lund_r04_charged_pt_160_180
+
+/Volumes/one/run4/proj_r02_charged.root 		:lund_r02_charged_pt_160_180_pfy_T: p +m75 +k6: title=py r=0.2
+/Volumes/one/run4/proj_r03_charged.root 		:lund_r03_charged_pt_160_180_pfy_T: p +m75 +k6: title=py r=0.3
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_160_180_pfy_T: p +m75 +k6: title=py r=0.4
+/Volumes/one/run4/proj_r05_charged.root 		:lund_r05_charged_pt_160_180_pfy_T: p +m75 +k6: title=py r=0.5
+
+#line -5.5,5,-1.5,0.8
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+#/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_160_180 :colz: title=lund_r04_charged_pt_160_180
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_160_180 :scat +k1 +a20: title=lund_r04_charged_pt_160_180
+
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_60_80_pfy_T: p +m75 +k6: title=py r=0.4 60
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_80_100_pfy_T: p +m75 +k6: title=py r=0.4 80
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_100_120_pfy_T: p +m75 +k6: title=py r=0.4 100
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_120_140_pfy_T: p +m75 +k6: title=py r=0.4 120
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_140_160_pfy_T: p +m75 +k6: title=py r=0.4 140
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_160_180_pfy_T: p +m75 +k6: title=py r=0.4 160
+
+#xrange -10,-0.09
+#grid xy
+#line -5.5,5,-1.5,0.8
+#line -6.5,5,-2.5,0.8, 2, 7
+#line -7.5,5,-3.5,0.8, 2, 7
+#line -8.5,5,-4.5,0.8, 2, 7
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_160_180_pfy: p : title=py
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x #log{(1 / \theta)}
+#y #log{(z \times \theta)}
+/Volumes/one/run4/proj_r04_charged.root 		:lund_r04_charged_pt_160_180_pfx: p : title=px

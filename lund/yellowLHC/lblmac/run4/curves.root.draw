@@ -1,0 +1,48 @@
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+/Volumes/one/run4/curves.root 		:k_z_0.01 :l  : title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root 		:k_z_0.05 :l  : title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root 		:k_z_0.1 :l  : title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root 		:k_z_0.2 :l  : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root 		:k_z_0.25 :l  : title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root 		:k_z_0.5 :l  : title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+/Volumes/one/run4/curves.root 		:k_c_1e-06 :l  : title=x[0]+TMath::Log(1e-06)
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+/Volumes/one/run4/curves.root 		:k_c_1e-05 :l  : title=x[0]+TMath::Log(1e-05)
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+/Volumes/one/run4/curves.root 		:k_c_0.0001 :l  : title=x[0]+TMath::Log(0.0001)
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+/Volumes/one/run4/curves.root 		:k_c_0.001 :l  : title=x[0]+TMath::Log(0.001)
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+/Volumes/one/run4/curves.root 		:k_c_0.01 :l  : title=x[0]+TMath::Log(0.01)
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+/Volumes/one/run4/curves.root 		:k_c_0.1 :l  : title=x[0]+TMath::Log(0.1)
+
