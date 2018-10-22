@@ -1,0 +1,217 @@
+#-----------------------
+#figure 80_v
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y d#bar{#rho}_{vac} / dz
+
+#miny 0
+#maxy 60
+
+#force_legend 1
+#legend 0.6,0.67,0.9,0.87, tx_size=0.035
+
+##line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+#vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2Dtf0_z :hist l : title=0.1 < (p_{T} t)^{-1} < 0.01
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2Dtf1_z :hist l : title=0.01 < (p_{T} t)^{-1} < 10^{-3}
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2Dtf2_z :hist l : title=10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2Dtf3_z :hist l +l9: title=10^{-4} < (p_{T} t)^{-1} < 10^{-5}
+#vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2Dtf4_z :hist l : title=10^{-5} < (p_{T} t)^{-1} < 10^{-6}
+
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+#-----------------------
+#figure 80_m
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y d#bar{#rho}_{vac} / dz
+
+#miny 0
+#maxy 60
+
+#force_legend 1
+#legend 0.6,0.67,0.9,0.87, tx_size=0.035
+
+##line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+#med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2Dtf0_z :hist l : title=0.1 < (p_{T} t)^{-1} < 0.01
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2Dtf1_z :hist l : title=0.01 < (p_{T} t)^{-1} < 10^{-3}
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2Dtf2_z :hist l : title=10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2Dtf3_z :hist l +l9: title=10^{-4} < (p_{T} t)^{-1} < 10^{-5}
+#med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2Dtf4_z :hist l : title=10^{-5} < (p_{T} t)^{-1} < 10^{-6}
+
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+#-----------------------
+#figure 80_mv
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y d(#bar{#rho}_{med} - #bar{#rho}_{vac}) / dz
+
+#miny -2
+#maxy +5
+
+#force_legend 1
+#legend 0.6,0.67,0.9,0.87, tx_size=0.035
+
+#line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+#med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf0_z_med_vac :hist l : title=0.1 < (p_{T} t)^{-1} < 0.01
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf1_z_med_vac :hist l : title=0.01 < (p_{T} t)^{-1} < 10^{-3}
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf2_z_med_vac :hist l : title=10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf3_z_med_vac :hist l +l9: title=10^{-4} < (p_{T} t)^{-1} < 10^{-5}
+#med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf4_z_med_vac :hist l : title=10^{-5} < (p_{T} t)^{-1} < 10^{-6}
+
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+#-----------------------
+#figure 80_mvrel
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y (#bar{#rho}_{med} - #bar{#rho}_{vac}) / #bar{#rho}_{vac}
+
+#miny -0.6
+#maxy +0.9
+
+#force_legend 1
+#legend 0.6,0.67,0.9,0.87, tx_size=0.035
+
+#line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+#med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf0_z_med_vac_relat :hist l : title=0.1 < (p_{T} t)^{-1} < 0.01
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf1_z_med_vac_relat :hist l : title=0.01 < (p_{T} t)^{-1} < 10^{-3}
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf2_z_med_vac_relat :hist l : title=10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf3_z_med_vac_relat :hist l +l9: title=10^{-4} < (p_{T} t)^{-1} < 10^{-5}
+#med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf4_z_med_vac_relat :hist l : title=10^{-5} < (p_{T} t)^{-1} < 10^{-6}
+
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+#-----------------------
+#figure 200_v
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y d#bar{#rho}_{vac} / dz
+
+#miny 0
+#maxy 60
+
+#force_legend 1
+#legend 0.6,0.67,0.9,0.87, tx_size=0.035
+
+##line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+#vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2Dtf0_z :hist l : title=0.1 < (p_{T} t)^{-1} < 0.01
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2Dtf1_z :hist l : title=0.01 < (p_{T} t)^{-1} < 10^{-3}
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2Dtf2_z :hist l : title=10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2Dtf3_z :hist l +l9: title=10^{-4} < (p_{T} t)^{-1} < 10^{-5}
+#vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2Dtf4_z :hist l : title=10^{-5} < (p_{T} t)^{-1} < 10^{-6}
+
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=200 < p_{T}^{jet} < 250 (GeV/c)
+
+#-----------------------
+#figure 200_m
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y d#bar{#rho}_{vac} / dz
+
+#miny 0
+#maxy 60
+
+#force_legend 1
+#legend 0.6,0.67,0.9,0.87, tx_size=0.035
+
+##line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2Dtf0_z :hist l : title=0.1 < (p_{T} t)^{-1} < 0.01
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2Dtf1_z :hist l : title=0.01 < (p_{T} t)^{-1} < 10^{-3}
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2Dtf2_z :hist l : title=10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2Dtf3_z :hist l +l9: title=10^{-4} < (p_{T} t)^{-1} < 10^{-5}
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :hlund2Dtf4_z :hist l : title=10^{-5} < (p_{T} t)^{-1} < 10^{-6}
+
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=200 < p_{T}^{jet} < 250 (GeV/c)
+
+#-----------------------
+#figure 200_mv
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y d(#bar{#rho}_{med} - #bar{#rho}_{vac}) / dz
+
+#miny -2
+#maxy +5
+
+#force_legend 1
+#legend 0.6,0.67,0.9,0.87, tx_size=0.035
+
+#line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf0_z_med_vac :hist l : title=0.1 < (p_{T} t)^{-1} < 0.01
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf1_z_med_vac :hist l : title=0.01 < (p_{T} t)^{-1} < 10^{-3}
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf2_z_med_vac :hist l : title=10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf3_z_med_vac :hist l +l9: title=10^{-4} < (p_{T} t)^{-1} < 10^{-5}
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf4_z_med_vac :hist l : title=10^{-5} < (p_{T} t)^{-1} < 10^{-6}
+
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=200 < p_{T}^{jet} < 250 (GeV/c)
+
+#-----------------------
+#figure 200_mvrel
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y (#bar{#rho}_{med} - #bar{#rho}_{vac}) / #bar{#rho}_{vac}
+
+#miny -0.6
+#maxy +0.9
+
+#force_legend 1
+#legend 0.6,0.67,0.9,0.87, tx_size=0.035
+
+#line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf0_z_med_vac_relat :hist l : title=0.1 < (p_{T} t)^{-1} < 0.01
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf1_z_med_vac_relat :hist l : title=0.01 < (p_{T} t)^{-1} < 10^{-3}
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf2_z_med_vac_relat :hist l : title=10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf3_z_med_vac_relat :hist l +l9: title=10^{-4} < (p_{T} t)^{-1} < 10^{-5}
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf4_z_med_vac_relat :hist l : title=10^{-5} < (p_{T} t)^{-1} < 10^{-6}
+
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=200 < p_{T}^{jet} < 250 (GeV/c)
+
+#-----------------------
+#figure comp_mvrel
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y (#bar{#rho}_{med} - #bar{#rho}_{vac}) / #bar{#rho}_{vac}
+
+#miny -0.6
+#maxy +0.9
+
+#force_legend 1
+##legend 0.6,0.67,0.9,0.87, tx_size=0.035
+#legend 0.55,0.677,0.9,0.876, tx_size=0.035
+
+#line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf1_z_med_vac_relat :hist l : title=low-p_{T} 0.01 < (p_{T} t)^{-1} < 10^{-3}
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf1_z_med_vac_relat :hist l -k: title=high-p_{T} 0.01 < (p_{T} t)^{-1} < 10^{-3}
+
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtf2_z_med_vac_relat :hist l +l9 : title=low-p_{T} 10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf2_z_med_vac_relat :hist l -k +l4 : title=high-p_{T} 10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+
+##comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=low-p_{T}: 80 < p_{T}^{jet} < 120 (GeV/c) item=high-p_{T}: 200 < p_{T}^{jet} < 250 (GeV/c)
+#comment 0.1,0.676,0.5,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=low-p_{T}: 80 < p_{T}^{jet} < 120 (GeV/c) item=high-p_{T}: 200 < p_{T}^{jet} < 250 (GeV/c)

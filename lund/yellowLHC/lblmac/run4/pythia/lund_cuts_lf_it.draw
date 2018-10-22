@@ -1,0 +1,838 @@
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, all splittings
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it0 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=1
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it1 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=2
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it2 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=3
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it3 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=4
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it4 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=5
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it5 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=6
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it6 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=7
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it7 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=8
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it8 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=9
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it9 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=10
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x ln(1/#Delta)
+#y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_it10 :colz over smooth noleg: title=lund 80+ GeV Jets
+
+##projection colors 46 and 30
+## 5 and 7 (yellow and cyan)
+
+#force_legend 1
+#comment 0.37,0.57,0.848,0.654, tx_size=0.03 item=  LF jets, n_{split}=11
+
+#legend 0.594,0.676,0.791,0.873, title=,, tx_size=0.03
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=80 < p_{T}^{jet} < 120 (GeV/c)
+
+##line 1.0, -1.5, 6., -6.5
+
+#miny -8
+#maxy 0
+##maxz 0.85
+#minz 0.0
+
+/Volumes/one/run4/curves.root           :k_z_1.0 :l +k1 noleg +l9 +w1 +a20: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.5 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.5*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.25 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.25*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.1 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.1*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.05 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.05*1./TMath::Exp(x[0]))
+/Volumes/one/run4/curves.root           :k_z_0.01 :l +k1 +a50 noleg +l9 +w1: title=TMath::Log(0.01*1./TMath::Exp(x[0]))
+#/Volumes/one/run4/curves.root           :k_z_0.2 :l +k1 +a50 noleg +l9 : title=TMath::Log(0.2*1./TMath::Exp(x[0]))
+
+#/Volumes/one/run4/curves.root           :k_c_0.1 :l +k1 +l1 : title=0.1 < (p_{T} t)^{-1} < 0.01
+/Volumes/one/run4/curves.root           :k_c_0.01 :l +k2 : title=(p_{T} t)^{-1} = 0.01
+/Volumes/one/run4/curves.root           :k_c_0.001 :l +k8 : title=(p_{T} t)^{-1} = 10^{-3}
+/Volumes/one/run4/curves.root           :k_c_0.0001 :l +k4 : title=(p_{T} t)^{-1} = 10^{-4}
+/Volumes/one/run4/curves.root           :k_c_1e-05 :l +k7 : title=(p_{T} t)^{-1} = 10^{-5}
+#/Volumes/one/run4/curves.root           :k_c_1e-06 :l +k8 : title=(p_{T} t)^{-1} = 10^{-6}
+
+#comment 0.683,0.403,0.885,0.532, item=z = 1.0 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.34,0.885,0.465, item=z = 0.5 tx_size=0.025 tx_rotation=-26.5
+#comment 0.684,0.28,0.885,0.41, item=z = 0.25 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.684,0.20,0.885,0.325, item=z = 0.1 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#comment 0.58,0.205,0.79,0.332, item=z = 0.05 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+#comment 0.374,0.205,0.583,0.332, item=z = 0.01 tx_size=0.025 tx_rotation=-26.5 tx_color=1
+
+#line  0.916290731874, -8, 0.916290731874, -1.60943791243,  1, 2, 1
+
+#comment 0.2,0.111,0.2,0.307, item=#Delta = 0.3 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.20397280433, -8, 1.20397280433, -1.89711998489,  1, 2, 1
+
+#comment 0.25,0.111,0.25,0.307, item=#Delta = 0.2 tx_rotation=90 tx_size= 0.025 tx_color=1
+#line  1.60943791243, -8, 1.60943791243, -2.30258509299,  1, 2, 1
+
+#comment 0.341,0.111,0.341,0.307, item=#Delta = 0.1 tx_rotation=90 tx_color=1
+#line  2.30258509299, -8, 2.30258509299, -2.99573227355,  1, 2, 1
+
+#comment 0.28,0.175,0.879,0.412, item=#Delta = 0.05 tx_rotation=90 tx_color=1
+#line  2.99573227355, -8, 2.99573227355, -3.68887945411,  1, 2, 1
+
+#comment 0.63,0.32,0.7,0.578, item=#Delta = 0.01 tx_rotation=90
+#line  4.60517018599, -8, 4.60517018599, -5.29831736655,  1, 2, 1
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x n_{split}
+#y p_{T,a} + p_{T,b}
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_ptsum_iter :colz over noleg: title=lund 80+ GeV Jets
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_ptsum_iter :colz over noleg +xprof: title=lund 80+ GeV Jets
+
+#miny 0
+#maxy 120
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x n_{split}
+#y z
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_z_iter :colz over noleg: title=lund 80+ GeV Jets
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_z_iter :colz over noleg +xprof: title=lund 80+ GeV Jets
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x n_{split}
+#y p_{T,b}
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_pt2_iter :colz over noleg: title=lund 80+ GeV Jets
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_pt2_iter :colz over noleg +xprof: title=lund 80+ GeV Jets
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+#x n_{split}
+#y k_{T}
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_kt_iter :colz over noleg: title=lund 80+ GeV Jets
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :hlund2D_kt_iter :colz over noleg +xprof: title=lund 80+ GeV Jets
