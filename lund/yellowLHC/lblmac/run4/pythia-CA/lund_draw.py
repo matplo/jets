@@ -294,7 +294,7 @@ def file_draw_lund(fname, ptmin, ptmax, lundptmin=0, lundptmax=1e4, iterations=F
 			bwy = (ymax - ymin) / (nbins * 1.0)
 			scond_b = " && abs(j_lund_lpdg) == 5 && j_lund_dR < (4.2 / (j_lund_pt1 + j_lund_pt2))"
 			jt.Draw(st, scond_lund + scond_b, "e")
-			hlund2D_b = r.gDirectory.Get("hlund2D_b_dc")
+			hlund2D_tmp = r.gDirectory.Get("hlund2D_b_dc")
 			hlund2D_tmp.GetXaxis().SetTitle("j_lund_log1odr")
 			hlund2D_tmp.GetYaxis().SetTitle("j_lund_logzdr")
 			hlund2D_tmp.Sumw2()
@@ -605,6 +605,7 @@ def file_draw_lund(fname, ptmin, ptmax, lundptmin=0, lundptmax=1e4, iterations=F
 	hlund2D_flat.Write()
 
 	for h in lpdg_list:
+		print 'writing', h.GetName(), h
 		h.Write()
 
 	hlund2D_dsjL.Write()
@@ -666,6 +667,24 @@ def file_draw_lund(fname, ptmin, ptmax, lundptmin=0, lundptmax=1e4, iterations=F
 	fout.Close()
 
 
+def lund_draw_beauty():
+	fnames = [	"beauty/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root",
+				"beauty/20GeV/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt20_maxpt10000.root",
+				"beauty/40GeV/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt40_maxpt10000.root"]
+	iterations = False
+	for lundpt in [[0, 1e5]]:
+		for fname in fnames:
+			pt0=80
+			pt1=120
+			if '20GeV' in fname:
+				pt0=20
+				pt1=40
+			if '40GeV' in fname:
+				pt0=40
+				pt1=60
+			file_draw_lund(fname, pt0, pt1, lundpt[0], lundpt[1], iterations=iterations)
+		iterations = False
+
 def lund_draw():
 	fnames = [	"lightf/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root",
 				"lightf/noISR/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root",
@@ -702,6 +721,8 @@ def diffs():
 if __name__ == '__main__':
 	if '--lund' in sys.argv:
 		lund_draw()
+	if '--beauty' in sys.argv:
+		lund_draw_beauty()
 	if '--extra' in sys.argv:
 		lund_draw_extra()
 	if '--diffs' in sys.argv:
