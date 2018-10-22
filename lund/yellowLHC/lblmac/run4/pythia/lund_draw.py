@@ -177,14 +177,15 @@ def file_draw_lund(fname, ptmin, ptmax, lundptmin=0, lundptmax=1e4, iterations=F
 			st = 'j_lund_logzdr[{}]:j_lund_log1odr[{}]>>{}({}, {}, {}, {}, {}, {})'.format(it, it, hname, nbins, xmin, xmax, nbins, ymin, ymax)
 			bwx = (xmax - xmin) / (nbins * 1.0)
 			bwy = (ymax - ymin) / (nbins * 1.0)
-			jt.Draw(st, scond_lund, "e")
+			scond_lund_it = scond + " && (j_lund_pt1[{}] + j_lund_pt2[{}]) > {} && (j_lund_pt1[{}] + j_lund_pt2[{}]) < {}".format(it, it, lundptmin, it, it, lundptmax)
+			jt.Draw(st, scond_lund_it, "e")
 			hlund2D_tmp = r.gDirectory.Get(hname)
 			hlund2D_tmp.GetXaxis().SetTitle("j_lund_log1odr")
 			hlund2D_tmp.GetYaxis().SetTitle("j_lund_logzdr")
 			hlund2D_tmp.Sumw2()
 			hlund2D_tmp.Scale(1. / njets / (bwx * bwy))
 			hlund2D_tmp_flat = hlund2D.Clone(hname + "_flat")
-			flatten_2D(hlund2D_flat, 0.01)
+			flatten_2D(hlund2D_tmp_flat, 0.01)
 			hit.append(hlund2D_tmp)
 			hit.append(hlund2D_tmp_flat)
 
@@ -222,7 +223,7 @@ def file_draw_lund(fname, ptmin, ptmax, lundptmin=0, lundptmax=1e4, iterations=F
 	jt.Draw(st, scond_lund, "e")
 	hlund2D_tmp = r.gDirectory.Get("hlund2D_kt_iter")
 	hlund2D_tmp.GetXaxis().SetTitle("iteration")
-	hlund2D_tmp.GetYaxis().SetTitle("p_{T,b}")
+	hlund2D_tmp.GetYaxis().SetTitle("k_{T} = p_{T,b} * #Delta")
 	hlund2D_tmp.Sumw2()
 	hlund2D_tmp.Scale(1. / njets / (bwx * bwy))
 	hlund2D_tmp_flat = hlund2D.Clone("hlund2D_kt_iter_flat")
@@ -269,6 +270,24 @@ def file_draw_lund(fname, ptmin, ptmax, lundptmin=0, lundptmax=1e4, iterations=F
 	hlund2D_b.Scale(1. / njets / (bwx * bwy))
 	hlund2D_b_flat = hlund2D_b.Clone("hlund2D_b_flat")
 	flatten_2D(hlund2D_b_flat, 0.01)
+
+	# dead cone - only for beauty
+	if 'beauty' in fname:
+		st = 'j_lund_logzdr:j_lund_log1odr>>hlund2D_b_dc({}, {}, {}, {}, {}, {})'.format(nbins, xmin, xmax, nbins, ymin, ymax)
+		bwx = (xmax - xmin) / (nbins * 1.0)
+		bwy = (ymax - ymin) / (nbins * 1.0)
+		scond_b = " && abs(j_lund_lpdg) == 5 && j_lund_dR < (4.2 / (j_lund_pt1 + j_lund_pt2))"
+		jt.Draw(st, scond_lund + scond_b, "e")
+		hlund2D_b = r.gDirectory.Get("hlund2D_b_dc")
+		hlund2D_tmp.GetXaxis().SetTitle("j_lund_log1odr")
+		hlund2D_tmp.GetYaxis().SetTitle("j_lund_logzdr")
+		hlund2D_tmp.Sumw2()
+		hlund2D_tmp.Scale(1. / njets / (bwx * bwy))
+		hlund2D_tmp_flat = hlund2D_tmp.Clone("hlund2D_b_dc_flat")
+		flatten_2D(hlund2D_tmp_flat, 0.01)
+		hit.append(hlund2D_tmp)
+		hit.append(hlund2D_tmp_flat)
+
 
 	st = 'j_lund_logzdr:j_lund_log1odr>>hlund2D_ga({}, {}, {}, {}, {}, {})'.format(nbins, xmin, xmax, nbins, ymin, ymax)
 	bwx = (xmax - xmin) / (nbins * 1.0)
@@ -473,6 +492,23 @@ def file_draw_lund(fname, ptmin, ptmax, lundptmin=0, lundptmax=1e4, iterations=F
 	#hlund2Dtf4_z.Sumw2()
 	hlund2Dtf4_z.Scale(1. / njets / (bwx_z))
 
+	# useful profiles
+	proft = r.TProfile("proft", "proft;p_{T,a}+p_{T,b};#LT t #GT = #LT 1/(k_{T} #Delta) #GT = #LT 1/(p_{T,b} #Delta^{2}) #GT", 12*3, 0, 120)
+	jt.Draw("1/(j_lund_dR*j_lund_dR*j_lund_pt1):(j_lund_pt1 + j_lund_pt2)>>proft", "abs(j_jeta) < 2. && j_jpt > 80 && j_jpt < 120", "colz")
+	hit.append(proft)
+
+	proft2 = r.TProfile("proft2", "proft2;ln(1/#Delta);#LT t #GT = #LT 1/(k_{T} #Delta) #GT = #LT 1/(p_{T,b} #Delta^{2}) #GT", 10*3, -0.9, 6)
+	jt.Draw("1/(j_lund_dR*j_lund_dR*j_lund_pt1):j_lund_log1odr>>proft2", "abs(j_jeta) < 2. && j_jpt > 80 && j_jpt < 120 ", "colz")
+	hit.append(proft2)
+
+	proft3 = r.TProfile("proft3", "proft3;n_{split};#LT t #GT = #LT 1/(k_{T} #Delta) #GT = #LT 1/(p_{T,b} #Delta^{2}) #GT", 11, 0, 11)
+	jt.Draw("1/(j_lund_dR*j_lund_dR*j_lund_pt1):Iteration$>>proft3", "abs(j_jeta) < 2. && j_jpt > 80 && j_jpt < 120 ", "colz")
+	hit.append(proft3)
+
+	proft4 = r.TProfile("proft4", "proft4;z;#LT t #GT = #LT 1/(k_{T} #Delta) #GT = #LT 1/(p_{T,b} #Delta^{2}) #GT", 20, 0, 0.5)
+	jt.Draw("1/(j_lund_dR*j_lund_dR*j_lund_pt1):j_lund_z>>proft4", "abs(j_jeta) < 2. && j_jpt > 80 && j_jpt < 120 ", "colz")
+	hit.append(proft4)
+
 	# profiles
 	hprofx = hlund2D.ProfileX()
 	_hprofy = hlund2D.ProfileY()
@@ -540,6 +576,7 @@ def file_draw_lund(fname, ptmin, ptmax, lundptmin=0, lundptmax=1e4, iterations=F
 		fvac.Close()
 
 	fout = r.TFile(foutname, "recreate")
+	print '[i] writing to', foutname
 	fout.cd()
 	htmp.Write()
 	hlund2D.Write()
@@ -621,6 +658,8 @@ def lund_draw():
 				"lightf/noFSR/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root",
 				"lightf/noISRnoFSR/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root",
 				"beauty/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root",
+				"beauty/20GeV/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt20_maxpt10000.root",
+				"beauty/40GeV/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt40_maxpt10000.root",
 				"charm/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root"]
 	iterations = False
 	for lundpt in [[0, 1e5], [80, 120], [70, 80], [60, 70], [40, 60], [20, 40], [10, 20]]:
@@ -629,7 +668,10 @@ def lund_draw():
 		iterations = False
 
 def lund_draw_extra():
-	fnames = [	"lightf/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root"]
+	fnames = [	"lightf/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root",
+				"lightf/noISR/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root",
+				"lightf/noFSR/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root",
+				"lightf/noISRnoFSR/subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root"]
 	iterations = True
 	for lundpt in [[0, 1e5]]:
 		for fname in fnames:
