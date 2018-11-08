@@ -37,12 +37,13 @@ class PythiaSJLund(object):
 		# self.seed = 'Random:setSeed=on Random:seed=0'
 		self.seed = self._setting('seed', '--time-seed')
 		self.pyseed = ''
-		if self.seed != '--time-seed':
-			self.pyseed = 'Random:setSeed=on Random:seed={}'.format(0)
+		if self.seed == '--time-seed':
+			self.pyseed = self.seed
+		else:
 			if self.seed == '--no-seed':
 				self.pyseed = ''
-		else:
-			self.pyseed = 'Random:setSeed=on Random:seed={}'.format(self.seed)
+			else:
+				self.pyseed = 'Random:setSeed=on Random:seed={}'.format(self.seed)
 		self.nev = self._setting('nev', 10000)
 		self.pthatmin = self._setting('pthatmin', 20.)
 		self.jptcut = self.pthatmin
@@ -53,7 +54,7 @@ class PythiaSJLund(object):
 		if process_short_name in ['hardQCD', 'hardQCDlf', 'hardQCDuds', 'hardQCDgluons', 'hardQCDquarks', 'hardQCDbeauty', 'hardQCDcharm']:
 			self.process_short_name = process_short_name
 		self.dir_seed = 0
-		self.jetty_command = 'jetty_subjets_exe --ca-task --R={} --nev={} --pTHatMin={} --jptcut={} --eCM={} --{} {}'.format(self.R, self.nev, self.pthatmin, self.jptcut, self.ecm, self.process_short_name, self._setting('extra', ''))
+		self.jetty_command = 'jetty_subjets_exe --ca-task --R={} --nev={} --pTHatMin={} --jptcut={} --eCM={} --{} {} {}'.format(self.R, self.nev, self.pthatmin, self.jptcut, self.ecm, self.process_short_name, self.pyseed, self._setting('extra', ''))
 		self.outputfname_base = self._setting('fname', 'job.sh')
 
 	def get_output_dir(self):
@@ -96,11 +97,12 @@ class PythiaSJLund(object):
 
 
 def main():
-	for pthm in [20, 40, 80, 100, 200]:
-		sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process='hardQCDquarks', fname='jobR04.sh')
-		sjl.make_job()
-		sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process='hardQCDquarks', fname='jobR07.sh', R=0.7)
-		sjl.make_job()
+	for proc in ['hardQCDbeauty', 'hardQCDuds', 'hardQCDcharm', 'hardQCDgluons']:
+		for pthm in [200, 20, 40, 80, 100]:
+			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR07.sh', R=0.7)
+			sjl.make_job()
+			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR04.sh')
+			sjl.make_job()
 
 
 if __name__ == '__main__':
