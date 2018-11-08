@@ -22,8 +22,6 @@ def grab_module_environment():
 
 
 class PythiaSJLund(object):
-	jetty_command = 'jetty_subjets_exe --ca-task --nev={nev} --pTHatMin={minpt} --jptcut={minpt} Beams:eCM={ecm} {process} {level} {seed}'
-
 	def _setting(self, key, default_value=None):
 		try:
 			return self.kwargs[key]
@@ -49,16 +47,22 @@ class PythiaSJLund(object):
 		self.jptcut = self.pthatmin
 		self.ecm = self._setting('ecm', 13000)
 		self.R = self._setting('R', 0.4)
+		self.level = self._setting('level', 'hadron')
+		self.pylevel = ''
+		if self.level == 'parton':
+			self.pylevel = 'HadronLevel:all=off'
+		else:
+			self.pylevel = ''
 		self.process_short_name = None
 		process_short_name = self._setting('process', None)
 		if process_short_name in ['hardQCD', 'hardQCDlf', 'hardQCDuds', 'hardQCDgluons', 'hardQCDquarks', 'hardQCDbeauty', 'hardQCDcharm']:
 			self.process_short_name = process_short_name
 		self.dir_seed = 0
-		self.jetty_command = 'jetty_subjets_exe --ca-task --R={} --nev={} --pTHatMin={} --jptcut={} --eCM={} --{} {} {}'.format(self.R, self.nev, self.pthatmin, self.jptcut, self.ecm, self.process_short_name, self.pyseed, self._setting('extra', ''))
+		self.jetty_command = 'jetty_subjets_exe --ca-task --R={} --nev={} --pTHatMin={} --jptcut={} --eCM={} --{} {} {} {}'.format(self.R, self.nev, self.pthatmin, self.jptcut, self.ecm, self.process_short_name, self.pyseed, self.pylevel, self._setting('extra', ''))
 		self.outputfname_base = self._setting('fname', 'job.sh')
 
 	def get_output_dir(self):
-		outputdir_base = os.path.join(self.outputdir_base, 'ecm_' + str(self.ecm), self.process_short_name, 'pthatmin_' + str(self.pthatmin))
+		outputdir_base = os.path.join(self.outputdir_base, 'ecm_' + str(self.ecm), self.process_short_name, self.level, 'pthatmin_' + str(self.pthatmin))
 		if self.seed == '--no-seed':
 			return outputdir_base
 		if self.seed == '--time-seed':
@@ -99,9 +103,21 @@ class PythiaSJLund(object):
 def main():
 	for proc in ['hardQCDbeauty', 'hardQCDuds', 'hardQCDcharm', 'hardQCDgluons']:
 		for pthm in [200, 20, 40, 80, 100]:
-			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR07.sh', R=0.7)
+			extra_s = ''
+			extra_s = 'PartonLevel:MPI=off PartonLevel:ISR=off'
+			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR07.sh', level='parton', extra=extra_s, R=0.7)
 			sjl.make_job()
-			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR04.sh')
+			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR04.sh', level='parton', extra=extra_s)
+			sjl.make_job()
+
+			extra_s = ''
+			if 'charm' in proc:
+				extra_s = '411:maydecay=no 421:maydecay=no'
+			if 'beauty' in proc:
+				extra_s = '511:maydecay=no'
+			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR07.sh', level='hadron', extra=extra_s, R=0.7)
+			sjl.make_job()
+			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR04.sh', level='hadron', extra=extra_s)
 			sjl.make_job()
 
 
