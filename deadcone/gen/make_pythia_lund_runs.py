@@ -93,7 +93,7 @@ class PythiaSJLund(object):
 		try:
 			with open(self.outputfname, 'w') as f:
 				f.write('#!/bin/bash\n')
-				f.writelines([modenv, '\n', 'cd {}\n'.format(self.outputdir), self.jetty_command])
+				f.writelines([modenv, '\n', 'cd {}\n'.format(self.outputdir), self.jetty_command, ' 2>&1 | tee {}.log'.format(self.outputfname)])
 			print '[i] written:', self.outputfname
 		except OSError as e:
 			print >> sys.stderr, e
