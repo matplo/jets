@@ -132,8 +132,11 @@ def main(draw_z = True, draw_tau = True, draw_theta = True, pdf = False):
 	h.Draw("colz")
 	tutils.gList.append(h)
 
-	fin = r.TFile("jewel/run3/med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root")
-	hjewel = fin.Get("med_vac")
+	# fin = r.TFile("jewel/run3/med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root")
+	# hjewel = fin.Get("med_vac")
+	fname = "/Volumes/mp128/data/run4/pythia-CA/lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root"
+	fin = r.TFile(fname)
+	hjewel = fin.Get("hlund2D_tw")
 	#hjewel.Smooth()
 	hjewel.SetMaximum(0.25)
 	hjewel.SetMinimum(-0.8)
