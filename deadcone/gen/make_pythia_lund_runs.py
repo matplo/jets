@@ -105,9 +105,9 @@ def main():
 		for pthm in [200, 20, 40, 80, 100]:
 			extra_s = ''
 			extra_s = 'PartonLevel:MPI=off PartonLevel:ISR=off'
-			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR07.sh', level='parton', extra=extra_s, R=0.7)
+			sjl = PythiaSJLund(os.getcwd(), nev=100000, pthatmin=pthm, process=proc, fname='jobR07.sh', level='parton', extra=extra_s, R=0.7)
 			sjl.make_job()
-			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR04.sh', level='parton', extra=extra_s)
+			sjl = PythiaSJLund(os.getcwd(), nev=100000, pthatmin=pthm, process=proc, fname='jobR04.sh', level='parton', extra=extra_s)
 			sjl.make_job()
 
 			extra_s = ''
@@ -115,9 +115,9 @@ def main():
 				extra_s = '411:maydecay=no 421:maydecay=no'
 			if 'beauty' in proc:
 				extra_s = '511:maydecay=no'
-			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR07.sh', level='hadron', extra=extra_s, R=0.7)
+			sjl = PythiaSJLund(os.getcwd(), nev=100000, pthatmin=pthm, process=proc, fname='jobR07.sh', level='hadron', extra=extra_s, R=0.7)
 			sjl.make_job()
-			sjl = PythiaSJLund('./', nev=100000, pthatmin=pthm, process=proc, fname='jobR04.sh', level='hadron', extra=extra_s)
+			sjl = PythiaSJLund(os.getcwd(), nev=100000, pthatmin=pthm, process=proc, fname='jobR04.sh', level='hadron', extra=extra_s)
 			sjl.make_job()
 
 
