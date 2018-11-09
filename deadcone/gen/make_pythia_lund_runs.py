@@ -44,7 +44,9 @@ class PythiaSJLund(object):
 				self.pyseed = 'Random:setSeed=on Random:seed={}'.format(self.seed)
 		self.nev = self._setting('nev', 10000)
 		self.pthatmin = self._setting('pthatmin', 20.)
-		self.jptcut = self.pthatmin
+		self.jptcut = self._setting('jptcut', -1)
+		if self.jptcut < 0:
+			self.jptcut = self.pthatmin
 		self.ecm = self._setting('ecm', 13000)
 		self.R = self._setting('R', 0.4)
 		self.level = self._setting('level', 'hadron')
@@ -58,11 +60,19 @@ class PythiaSJLund(object):
 		if process_short_name in ['hardQCD', 'hardQCDlf', 'hardQCDuds', 'hardQCDgluons', 'hardQCDquarks', 'hardQCDbeauty', 'hardQCDcharm']:
 			self.process_short_name = process_short_name
 		self.dir_seed = 0
+		self.reweight_power = self._setting('reweight', -1)
 		self.jetty_command = 'jetty_subjets_exe --ca-task --R={} --nev={} --pTHatMin={} --jptcut={} --eCM={} --{} {} {} {}'.format(self.R, self.nev, self.pthatmin, self.jptcut, self.ecm, self.process_short_name, self.pyseed, self.pylevel, self._setting('extra', ''))
+		self.reweight_power = self._setting('reweight', -1)
+		self.ptref = self._setting('ptref', 20)
+		if self.reweight_power >= 0:
+			sreweight = 'PhaseSpace:bias2Selection=on PhaseSpace:bias2SelectionPow={} PhaseSpace:bias2SelectionRef={}'.format(self.reweight_power, self.ptref)
+			self.jetty_command = 'jetty_subjets_exe --ca-task --R={} --nev={} --jptcut={} --eCM={} --{} {} {} {}'.format(self.R, self.nev, self.jptcut, self.ecm, self.process_short_name, self.pyseed, self.pylevel, self._setting('extra', ''))
 		self.outputfname_base = self._setting('fname', 'job.sh')
 
 	def get_output_dir(self):
 		outputdir_base = os.path.join(self.outputdir_base, 'ecm_' + str(self.ecm), self.process_short_name, self.level, 'pthatmin_' + str(self.pthatmin))
+		if self.reweight_power >= 0:
+			outputdir_base = os.path.join(self.outputdir_base, 'ecm_' + str(self.ecm), self.process_short_name, self.level, 'rw_{}_pt_{}'.format(str(self.reweight_power), str(self.ptref)))
 		if self.seed == '--no-seed':
 			return outputdir_base
 		if self.seed == '--time-seed':
@@ -120,6 +130,28 @@ def main():
 			sjl = PythiaSJLund(os.getcwd(), nev=100000, pthatmin=pthm, process=proc, fname='jobR04.sh', level='hadron', extra=extra_s)
 			sjl.make_job()
 
+def main_ref():
+	for proc in ['hardQCDbeauty', 'hardQCDuds', 'hardQCDcharm', 'hardQCDgluons']:
+		extra_s = ''
+		extra_s = 'PartonLevel:MPI=off PartonLevel:ISR=off'
+		sjl = PythiaSJLund(os.getcwd(), nev=100000, process=proc, fname='jobR07.sh', level='parton', jptcut=10., ptref=50., reweight=4, extra=extra_s, R=0.7)
+		sjl.make_job()
+		sjl = PythiaSJLund(os.getcwd(), nev=100000, process=proc, fname='jobR04.sh', level='parton', jptcut=10., ptref=50., reweight=4, extra=extra_s)
+		sjl.make_job()
+
+		extra_s = ''
+		if 'charm' in proc:
+			extra_s = '411:maydecay=no 421:maydecay=no'
+		if 'beauty' in proc:
+			extra_s = '511:maydecay=no'
+		sjl = PythiaSJLund(os.getcwd(), nev=100000, process=proc, fname='jobR07.sh', level='hadron', jptcut=10., ptref=50., reweight=4, extra=extra_s, R=0.7)
+		sjl.make_job()
+		sjl = PythiaSJLund(os.getcwd(), nev=100000, process=proc, fname='jobR04.sh', level='hadron', jptcut=10., ptref=50., reweight=4, extra=extra_s)
+		sjl.make_job()
+
 
 if __name__ == '__main__':
-	main()
+	if '-w' in sys.argv:
+		main_ref()
+	else:
+		main()
