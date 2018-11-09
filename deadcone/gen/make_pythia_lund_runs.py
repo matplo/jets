@@ -66,7 +66,7 @@ class PythiaSJLund(object):
 		self.ptref = self._setting('ptref', 20)
 		if self.reweight_power >= 0:
 			sreweight = 'PhaseSpace:bias2Selection=on PhaseSpace:bias2SelectionPow={} PhaseSpace:bias2SelectionRef={}'.format(self.reweight_power, self.ptref)
-			self.jetty_command = 'jetty_subjets_exe --ca-task --R={} --nev={} --jptcut={} --eCM={} --{} {} {} {}'.format(self.R, self.nev, self.jptcut, self.ecm, self.process_short_name, self.pyseed, self.pylevel, self._setting('extra', ''))
+			self.jetty_command = 'jetty_subjets_exe --ca-task --R={} --nev={} --jptcut={} --eCM={} --{} {} {} {} {}'.format(self.R, self.nev, self.jptcut, self.ecm, self.process_short_name, self.pyseed, self.pylevel, sreweight, self._setting('extra', ''))
 		self.outputfname_base = self._setting('fname', 'job.sh')
 
 	def get_output_dir(self):
