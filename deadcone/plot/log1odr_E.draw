@@ -1,0 +1,95 @@
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title uds 20
+hardQCDuds_parton_ptmin20.0_R0.4.root 		:log1odrE :colz over noleg smooth: title=j_lund_log1odr:j_lund_e {j_jpt > 20.0 && j_lund_e > 20.0 && abs(j_jeta) < 2.9 - 0.4 && j_lund_dR < 0.4}
+dead_cone_theo.root 		:log1otheta_c_theo_c :l +l1 +k2: title=#theta_{d.c.} c-quark
+dead_cone_theo.root 		:log1otheta_c_theo_b :l +l1 +k4: title=#theta_{d.c.} b-quark
+
+#force_legend 1
+#legend 0.232,0.694,0.498,0.893, tx_size=0.04 alpha=50
+#grid xy
+#miny 0
+#x E (GeV)
+#y ln(1/#theta)
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title b 20
+hardQCDbeauty_parton_ptmin20.0_R0.4.root 		:log1odrE :colz over noleg smooth: title=j_lund_log1odr:j_lund_e {j_jpt > 20.0 && j_lund_e > 20.0 && abs(j_jeta) < 2.9 - 0.4 && j_lund_dR < 0.4}
+dead_cone_theo.root 		:log1otheta_c_theo_c :l +l1 +k2: title=#theta_{d.c.} c-quark
+dead_cone_theo.root 		:log1otheta_c_theo_b :l +l1 +k4: title=#theta_{d.c.} b-quark
+
+#force_legend 1
+#legend 0.232,0.694,0.498,0.893, tx_size=0.04 alpha=50
+#grid xy
+#miny 0
+#x E (GeV)
+#y ln(1/#theta)
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title B 20
+hardQCDbeauty_hadron_ptmin20.0_R0.4.root 		:log1odrE :colz over noleg smooth: title=j_lund_log1odr:j_lund_e {j_jpt > 20.0 && j_lund_e > 20.0 && abs(j_jeta) < 2.9 - 0.4 && j_lund_dR < 0.4}
+dead_cone_theo.root 		:log1otheta_c_theo_c :l +l1 +k2: title=#theta_{d.c.} c-quark
+dead_cone_theo.root 		:log1otheta_c_theo_b :l +l1 +k4: title=#theta_{d.c.} b-quark
+
+#force_legend 1
+#legend 0.232,0.694,0.498,0.893, tx_size=0.04 alpha=50
+#grid xy
+#miny 0
+#x E (GeV)
+#y ln(1/#theta)
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title uds 40
+hardQCDuds_parton_ptmin40.0_R0.4.root 		:log1odrE :colz over noleg smooth: title=j_lund_log1odr:j_lund_e {j_jpt > 40.0 && j_lund_e > 40.0 && abs(j_jeta) < 2.9 - 0.4 && j_lund_dR < 0.4}
+dead_cone_theo.root 		:log1otheta_c_theo_c :l +l1 +k2: title=#theta_{d.c.} c-quark
+dead_cone_theo.root 		:log1otheta_c_theo_b :l +l1 +k4: title=#theta_{d.c.} b-quark
+
+#force_legend 1
+#legend 0.232,0.694,0.498,0.893, tx_size=0.04 alpha=50
+#grid xy
+#miny 0
+#x E (GeV)
+#y ln(1/#theta)
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title b 40
+hardQCDbeauty_parton_ptmin40.0_R0.4.root 		:log1odrE :colz over noleg smooth: title=j_lund_log1odr:j_lund_e {j_jpt > 40.0 && j_lund_e > 40.0 && abs(j_jeta) < 2.9 - 0.4 && j_lund_dR < 0.4}
+dead_cone_theo.root 		:log1otheta_c_theo_c :l +l1 +k2: title=#theta_{d.c.} c-quark
+dead_cone_theo.root 		:log1otheta_c_theo_b :l +l1 +k4: title=#theta_{d.c.} b-quark
+
+#force_legend 1
+#legend 0.232,0.694,0.498,0.893, tx_size=0.04 alpha=50
+#grid xy
+#miny 0
+#x E (GeV)
+#y ln(1/#theta)
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title B 40
+hardQCDbeauty_hadron_ptmin40.0_R0.4.root 		:log1odrE :colz over noleg smooth: title=j_lund_log1odr:j_lund_e {j_jpt > 40.0 && j_lund_e > 40.0 && abs(j_jeta) < 2.9 - 0.4 && j_lund_dR < 0.4}
+dead_cone_theo.root 		:log1otheta_c_theo_c :l +l1 +k2: title=#theta_{d.c.} c-quark
+dead_cone_theo.root 		:log1otheta_c_theo_b :l +l1 +k4: title=#theta_{d.c.} b-quark
+
+#force_legend 1
+#legend 0.232,0.694,0.498,0.893, tx_size=0.04 alpha=50
+#grid xy
+#miny 0
+#x E (GeV)
+#y ln(1/#theta)
