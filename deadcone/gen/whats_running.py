@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 import pyutils
+import sys
+
 
 class JobInfo(object):
 	def __init__(self, s):
@@ -35,13 +37,25 @@ class JobStats(object):
 
 def main():
 	jstats = JobStats('ssh mpubu qstat -f')
+
+	if '-h' in sys.argv:
+		for j in jstats.jobs:
+			print '[i] got keys...'
+			for k in j.d:
+				print k
+			break
+		return
+
 	jr = []
+	jr_o = []
 	for j in jstats.jobs:
 		if j.d['job_state'] == 'R':
 			jr.append(j.d['submit_args'].split(' ')[-1])
+			jr_o.append(j.d['Output_Path'])
 	print '[i] runnin...', len(jr)
-	for j in jr:
+	for i, j in enumerate(jr):
 		print j
+		print 'output path:', jr_o[i]
 
 	jq = []
 	for j in jstats.jobs:

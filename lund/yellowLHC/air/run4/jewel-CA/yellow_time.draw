@@ -1,0 +1,26 @@
+#-----------------------
+#figure 80_mvrel
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y (#bar{#rho}_{med} - #bar{#rho}_{vac}) / #bar{#rho}_{vac}
+
+#miny -0.6
+#maxy +0.9
+
+#force_legend 1
+#legend 0.599,0.559,0.899,0.871, tx_size=0.035 title=ln(k_{T}) = ln#frac{1}{#Delta} + ln#frac{1}{p_{T} t}
+
+#line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtime5_z_med_vac_relat :hist l : title=low-p_{T} for t < 10
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtime5_z_med_vac_relat :hist l +l9: title=high-p_{T} for t < 10
+
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000_diff.root :hlund2Dtime7_z_med_vac_relat :hist l : title=low-p_{T} for t > 10
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtime7_z_med_vac_relat :hist l +l9: title=high-p_{T} for t > 10
+
+##comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure
+
+#comment 0.0993,0.561,0.5,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=low-p_{T}: 80 < p_{T}^{jet} < 120 (GeV/c) item=high-p_{T}: 200 < p_{T}^{jet} < 250 (GeV/c)
+

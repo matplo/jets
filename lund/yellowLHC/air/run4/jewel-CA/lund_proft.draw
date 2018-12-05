@@ -1,0 +1,110 @@
+#-----------------------
+#figure 80_jewel
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft :p: title=lund 80+ GeV Jets
+
+#-----------------------
+#figure 80_jewel
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft2 :hist l: title=VACUUM 80-120 GeV
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft2 :p -k: title=MEDIUM 80-120 GeV
+
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :proft2 :hist l: title=VACUUM 200-250 GeV
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :proft2 :p -k: title=MEDIUM 200-250 GeV
+
+#miny 9
+#minx 0.9
+#logy 1
+
+#legend 0.248,0.655,0.449,0.854, tx_size=0.03 title=JEWEL + PYTHIA (recoil OFF) at 5 TeV
+
+#-----------------------
+#figure 80_jewel
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft2 :hist l: title=VACUUM 80-120 GeV
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft2 :p -k: title=MEDIUM 80-120 GeV
+
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :proft2 :hist l: title=VACUUM 200-250 GeV
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :proft2 :p -k: title=MEDIUM 200-250 GeV
+
+#miny 9
+#maxy 50
+#maxx 4
+#xrange 1,3
+#logy 1
+
+#legend 0.248,0.655,0.449,0.854, tx_size=0.03 title=JEWEL + PYTHIA (recoil OFF) at 5 TeV
+
+#-----------------------
+#figure 80_jewel
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft3 :hist l: title=VACUUM 80-120 GeV
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft3 :p -k: title=MEDIUM 80-120 GeV
+
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :proft3 :hist l: title=VACUUM 200-250 GeV
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :proft3 :p -k: title=MEDIUM 200-250 GeV
+
+#legend 0.248,0.655,0.449,0.854, tx_size=0.03 title=JEWEL + PYTHIA (recoil OFF) at 5 TeV
+
+#miny 9
+#maxy 1e4
+#logy 1
+
+##logy 1
+
+#-----------------------
+#figure 80_jewel
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft4 :hist l: title=VACUUM 80-120 GeV
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft4 :p -k: title=MEDIUM 80-120 GeV
+
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :proft4 :hist l: title=VACUUM 200-250 GeV
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :proft4 :p -k: title=MEDIUM 200-250 GeV
+
+#-----------------------
+#figure 80_jewel
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :profdR :hist l: title=VACUUM 80-120 GeV
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :profdR :p -k: title=MEDIUM 80-120 GeV
+
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :profdR :hist l: title=VACUUM 200-250 GeV
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root :profdR :p -k: title=MEDIUM 200-250 GeV
+
+#legend 0.546,0.657,0.748,0.854, tx_size=0.03 title=JEWEL + PYTHIA (recoil OFF) at 5 TeV
+#x n_{split}
+#-----------------------
+#figure 80_jewel
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :profpt :p: title=lund 80+ GeV Jets
+
+#maxy 1e5

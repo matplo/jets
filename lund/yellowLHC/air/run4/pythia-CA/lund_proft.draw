@@ -1,0 +1,54 @@
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft :p: title=lund 80+ GeV Jets
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft2 :p: title=lund 80+ GeV Jets
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft3 :p: title=lund 80+ GeV Jets
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :proft4 :p: title=lund 80+ GeV Jets
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :profdR :p: title=lund 80+ GeV Jets
+
+#-----------------------
+#figure 80_lf
+#geom 500x500
+#date
+#title: smart group
+##x ln(1/#Delta)
+##y ln(#kappa)
+lightf/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root :profpt :p: title=lund 80+ GeV Jets
