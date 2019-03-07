@@ -1,0 +1,13 @@
+*.png
+*.root
+*.txt
+*.pdf
+*.pyc
+*.log
+*.hepmc
+3asum
+.DS_Store
+*.confobj
+hout_subjets_*.root.draw
+subjets_*.root.draw
+starter3.py

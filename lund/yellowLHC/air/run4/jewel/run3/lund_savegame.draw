@@ -1,0 +1,99 @@
+#-----------------------
+#figure test limits
+#geom 500x500
+#date
+#title: smart group
+#x log (1 / #Delta R)
+#y log ( z #Delta R)
+#logz 1
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root 		:hlund2D :colz +xprof +yprof: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x log (1 / #Delta R)
+#y log ( z #Delta R)
+vac_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root 		:hlund2D :colz +xprof +yprof over smooth: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x log (1 / #Delta R)
+#y log ( z #Delta R)
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root 		:hlund2D :colz +xprof +yprof over smooth: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x log (1 / #Delta R)
+#y log ( z #Delta R)
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root 		:med_vac :colz over smooth: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x log (1 / #Delta R)
+#y log ( z #Delta R)
+med_80/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt80_maxpt10000.root 		:med_div_vac :colz over smooth: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x log (1 / #Delta R)
+#y log ( z #Delta R)
+vac_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root 		:hlund2D :colz +xprof +yprof over smooth: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x log (1 / #Delta R)
+#y log ( z #Delta R)
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root 		:hlund2D :colz +xprof +yprof over smooth: title=lund 80+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x log (1 / #Delta R)
+#y log ( z #Delta R)
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root 		:med_vac :colz over smooth: title=lund 200+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03
+
+#-----------------------
+#figure
+#geom 500x500
+#date
+#title: smart group
+#x log (1 / #Delta R)
+#y log ( z #Delta R)
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000.root 		:med_div_vac :colz over smooth: title=lund 200+ GeV Jets
+#force_legend 1
+#legend tx_size=0.03

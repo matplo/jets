@@ -1,0 +1,53 @@
+#-----------------------
+#figure 200_mvrel
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y (#bar{#rho}_{med} - #bar{#rho}_{vac}) / #bar{#rho}_{vac}
+
+#miny -0.6
+#maxy +0.9
+
+#force_legend 1
+#legend 0.6,0.67,0.9,0.87, tx_size=0.035 title=0.01 < (p_{T} t)^{-1} < 10^{-3}
+
+#line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf0_z_med_vac_relat :hist l : title=0.1 < (p_{T} t)^{-1} < 0.01
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf1_z_med_vac_relat :hist l : title=T_{med} = 0.42
+
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf2_z_med_vac_relat :hist l : title=10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf3_z_med_vac_relat :hist l +l9: title=10^{-4} < (p_{T} t)^{-1} < 10^{-5}
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf4_z_med_vac_relat :hist l : title=10^{-5} < (p_{T} t)^{-1} < 10^{-6}
+
+med_200_lowT/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf1_z_med_vac_relat :hist l : title=T_{med} = 0.21
+
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=200 < p_{T}^{jet} < 250 (GeV/c)
+
+#-----------------------
+#figure 200_mvrel
+#geom 500x500
+#date
+#title: smart group
+#x z
+#y (#bar{#rho}_{med} - #bar{#rho}_{vac}) / #bar{#rho}_{vac}
+
+#miny -0.6
+#maxy +0.9
+
+#force_legend 1
+#legend 0.6,0.67,0.9,0.87, tx_size=0.035 title=0.01 < (p_{T} t)^{-1} < 10^{-3}
+
+#line 0, 0, 0.5, 0, 1, 1, 1, 100
+
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf0_z_med_vac_relat :hist l : title=0.1 < (p_{T} t)^{-1} < 0.01
+med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf1_z_med_vac_relat :hist l : title= 0-10 %
+
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf2_z_med_vac_relat :hist l : title=10^{-3} < (p_{T} t)^{-1} < 10^{-4}
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf3_z_med_vac_relat :hist l +l9: title=10^{-4} < (p_{T} t)^{-1} < 10^{-5}
+#med_200/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf4_z_med_vac_relat :hist l : title=10^{-5} < (p_{T} t)^{-1} < 10^{-6}
+
+med_200_non_cent/hout_subjets_ca_sjR10_R0.4_A2_r0.1_sjA1_sdzcut0.1_sdbeta0_sdr0.4_maxEta3_minpt200_maxpt10000_diff.root :hlund2Dtf1_z_med_vac_relat :hist l : title= 50-60 %
+
+#comment 0.14,0.676,0.774,0.873, tx_size=0.03 item=JEWEL (no recoils) + PYTHIA item=pp #sqrt{s_{NN}} = 5 TeV item=anti-k_{T} R=0.4; C/A structure item=200 < p_{T}^{jet} < 250 (GeV/c) item=T_{med} = 0.42
